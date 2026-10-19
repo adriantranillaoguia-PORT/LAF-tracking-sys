@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Lost & Found Tracking Web App
 
 A clean, responsive Lost & Found tracking web application built with React 18, Vite, Supabase (Database, Auth, Storage, and Realtime), and plain CSS. Each item card is styled like a traditional luggage tag with color-coded status badges, punch-hole detailing, and dark mode support.
@@ -106,3 +107,6 @@ Open your browser to the URL displayed in your terminal (usually `http://localho
    - Apply `supabase/migrations/20261014_authenticated_client_reporting.sql` to existing projects to remove legacy anonymous report and image-upload policies.
 - **Never Expose the Service Role Key**: Never use or paste `service_role` secret keys in client-side code or `.env` files. The service role key bypasses Row Level Security.
 - **Public Contact Details**: In this application, contact details provided on reported items are publicly readable by design so that individuals who find or lose belongings can contact each other directly. If your deployment requires privacy, consider masking phone numbers or relaying communications through a secure backend form.
+=======
+# LAF-tracking-sys
+>>>>>>> f5f82b1c3b74d4f832eb913faf902d5b2b1dac9a

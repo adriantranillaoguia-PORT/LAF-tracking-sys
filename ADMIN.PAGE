@@ -1,0 +1,37 @@
+I have a Vite + React 18 app (react-router-dom v7, @supabase/supabase-js) called Lost & Found Tracker. People can report lost/found items, and an admin can sign in to mark items as claimed or delete them. Right now the admin login is a popup. Please restructure it as follows.
+
+GOALS
+1. Move the admin area to its own URL route: /admin (dashboard) and /admin/login (login page).
+2. Separate the admin login from regular user login. Admin sign-in must live only on /admin/login, and there should be no admin link anywhere in the public UI.
+3. Make it actually secure, not just hidden. Use a role check in the frontend AND Supabase Row Level Security in the database.
+
+REQUIREMENTS
+
+Database (update supabase/schema.sql):
+- Create an `admins` table with `user_id uuid primary key references auth.users(id) on delete cascade`.
+- Enable RLS on `admins`. A logged-in user can only select their own row.
+- Create a `public.is_admin()` SQL function (security definer, stable) that returns true if auth.uid() exists in `admins`.
+- Enable RLS on the items table with these policies:
+  - Anyone can SELECT items.
+  - Anyone can INSERT (report) items.
+  - Only admins (is_admin()) can UPDATE or DELETE.
+- Include the SQL to insert my admin account by email into `admins`.
+
+Frontend:
+- In App.jsx, set up routes with BrowserRouter: "/" (public home), "/admin/login" (AdminLogin), "/admin" (AdminDashboard wrapped in RequireAdmin).
+- Create components/RequireAdmin.jsx: check the Supabase session, then confirm the user exists in `admins`. Show a loading state while checking. If there is no session or the user is not an admin, redirect to /admin/login.
+- Create pages/AdminLogin.jsx: email and password form using supabase.auth.signInWithPassword. After login, verify the user is in `admins`. If not, sign them out and show the same generic "Invalid credentials" message (don't reveal whether the account exists). On success, navigate to /admin.
+- Create pages/AdminDashboard.jsx: move the existing admin features here (list items, Mark claimed, Delete item) and add a Logout button that calls supabase.auth.signOut() and redirects to /admin/login.
+- Remove the old admin popup and any admin links from the public pages.
+
+Security checklist:
+- Use only the Supabase anon key in the frontend (never the service_role key).
+- Keep .env in .gitignore.
+- Remind me to disable public sign-ups in Supabase (Authentication > Providers > Email) and create the admin account manually.
+- For deployment, add a rewrite rule (_redirects for Netlify or vercel.json for Vercel) so /admin doesn't 404 on refresh.
+
+HOW TO WORK
+- Read my existing files first (App.jsx, ADMIN.PAGE, index.html, supabase/schema.sql) and adapt to my current code and table names instead of starting from scratch.
+- Keep my current styling and component structure where possible.
+- Show me each file you change, and explain in simple terms what each part does, since I'm a student learning.
+- At the end, give me step-by-step testing instructions: logged out visiting /admin, a non-admin user trying to access /admin, an admin logging in, and trying a delete from the browser console as a non-admin to confirm RLS blocks it.s

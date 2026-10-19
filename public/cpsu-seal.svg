@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" role="img" aria-labelledby="title">
+  <title id="title">Lost and Found campus tracker logo</title>
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0.8" y2="1">
+      <stop stop-color="#9be8ff"/>
+      <stop offset="1" stop-color="#1688ef"/>
+    </linearGradient>
+    <linearGradient id="lens" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#e6fbff"/>
+      <stop offset=".35" stop-color="#52d6ff"/>
+      <stop offset=".7" stop-color="#1388ed"/>
+      <stop offset="1" stop-color="#baf4ff"/>
+    </linearGradient>
+    <linearGradient id="bag" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#1264bb"/>
+      <stop offset=".52" stop-color="#073b7d"/>
+      <stop offset="1" stop-color="#05254f"/>
+    </linearGradient>
+    <linearGradient id="glass" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#c5f6ff" stop-opacity=".42"/>
+      <stop offset=".45" stop-color="#5ebfff" stop-opacity=".08"/>
+      <stop offset="1" stop-color="#1388ed" stop-opacity=".22"/>
+    </linearGradient>
+    <clipPath id="campus"><circle cx="108" cy="104" r="79"/></clipPath>
+  </defs>
+  <g fill="none" stroke="#76e4ff" stroke-linecap="round" stroke-width="8">
+    <path d="m187 31 7-19M204 48l15-12M212 67l17-1"/>
+  </g>
+  <circle cx="108" cy="104" r="79" fill="url(#sky)"/>
+  <g clip-path="url(#campus)" fill="#075eb9">
+    <path d="M23 103h19V77h17V65h34v19h14V54h17V40l21 9v15h16v13h21v35z"/>
+    <path d="M99 59 115 50l17 9v8H99z" fill="#064d9d"/>
+    <path d="M112 40v-9h5v10l12 5h-28z" fill="#064d9d"/>
+    <path d="M34 111q17-22 34 0t34 0 34 0 35 0 36-1v47H25z" fill="#0876d8"/>
+  </g>
+  <g fill="#a9edff" opacity=".95">
+    <circle cx="38" cy="99" r="9"/><circle cx="49" cy="95" r="12"/><circle cx="63" cy="101" r="10"/>
+    <circle cx="153" cy="101" r="11"/><circle cx="166" cy="96" r="13"/><circle cx="179" cy="102" r="9"/>
+  </g>
+  <g fill="#0a1d34" stroke="#ccefff" stroke-linejoin="round" stroke-width="3">
+    <path d="m18 132 39-21 22 51-43 22q-7 3-11-5l-13-34q-3-8 6-13z"/>
+    <path d="m25 136 31-17 16 39-34 17z" fill="#102b48" stroke="#66839c" stroke-dasharray="3 3" stroke-width="1.5"/>
+    <circle cx="43" cy="165" r="5" fill="#94b3cc" stroke="none"/>
+  </g>
+  <path d="m163 159 49 48q7 7 13 0t0-14l-47-47z" fill="#061b37" stroke="#06172e" stroke-linejoin="round" stroke-width="9"/>
+  <path d="m169 158 47 47" fill="none" stroke="#25aaf7" stroke-linecap="round" stroke-width="6"/>
+  <path d="m162 150 14 12-12 15-14-12z" fill="#0b61af" stroke="#6bdcff" stroke-width="2"/>
+  <circle cx="108" cy="124" r="68" fill="#061a33" stroke="#04152c" stroke-width="9"/>
+  <circle cx="108" cy="124" r="65" fill="url(#glass)" stroke="url(#lens)" stroke-width="8"/>
+  <circle cx="108" cy="124" r="56" fill="none" stroke="#a8f0ff" stroke-width="2"/>
+  <path d="M92 100q1-18 16-18t17 18" fill="none" stroke="#061d3b" stroke-linecap="round" stroke-width="9"/>
+  <path d="M90 102q2-15 18-15t18 15" fill="none" stroke="#168bea" stroke-linecap="round" stroke-width="4"/>
+  <path d="M72 119q0-12 13-13h47q13 2 13 15v50q0 14-14 14H87q-15-1-15-15z" fill="url(#bag)" stroke="#061a33" stroke-width="4"/>
+  <path d="M82 145q27-12 53 0v25q-25-7-53 0z" fill="#0b56a2" stroke="#082b55" stroke-width="3"/>
+  <path d="M83 148q26-10 51 0" fill="none" stroke="#55b8ff" stroke-width="2"/>
+  <rect x="99" y="119" width="21" height="10" rx="2" fill="#95dfff" stroke="#06244a" stroke-width="2"/>
+  <path d="M75 112q-9 20-1 47M142 113q9 17 2 45" fill="none" stroke="#031b38" stroke-linecap="round" stroke-width="7"/>
+  <path d="M75 116q-7 16-2 36M142 116q7 16 2 36" fill="none" stroke="#258de0" stroke-linecap="round" stroke-width="2.5"/>
+  <g transform="rotate(18 65 144)">
+    <path d="M63 117v10" stroke="#d9f2ff" stroke-width="3"/>
+    <circle cx="63" cy="115" r="6" fill="none" stroke="#d9f2ff" stroke-width="2.5"/>
+    <path d="M54 127h18v31q0 5-5 5h-8q-5 0-5-5z" fill="#087de0" stroke="#062a5b" stroke-width="2"/>
+    <path d="M63 135a5 5 0 0 0-3 9l-2 7h10l-2-7a5 5 0 0 0-3-9z" fill="#f1fbff"/>
+  </g>
+  <path d="M30 198q76-9 143 0-67 8-143 0z" fill="#087de0" opacity=".85"/>
+</svg>
